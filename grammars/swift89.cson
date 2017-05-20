@@ -15,15 +15,11 @@
   }
   {
     'name': 'keyword.declaration.swift'
-    'match': '\\b(import|throws)\\b'
+    'match': '\\b(import|throws|rethrows)\\b'
   }
   {
     'name': 'storage.type.swift'
     'match': '\\b(precedencegroup|class|struct|enum|extension|protocol|let|var|typealias)\\b'
-  }
-  {
-    'name': 'storage.type.annotation.swift'
-    'match': '\\s+(@autoclosure|@noescape|@escaping)\\s+'
   }
   {
     'name': 'storage.modifier.swift'
@@ -65,7 +61,7 @@
     'patterns': [
         {
             'name': 'keyword.reserved.swift'
-            'match': '\\b(inout|@escaping)\\s+'
+            'match': '(?<=\\:)\\s*(@escaping|@autoclosure|inout)\\s+'
         }
         'include': '$self'
     ]
@@ -80,7 +76,7 @@
     'patterns': [
         {
             'name': 'keyword.reserved.swift'
-            'match': '\\b(inout|@escaping)\\s+'
+            'match': '(?<=\\:)\\s*(@escaping|@autoclosure|inout)\\s+'
         }
         'include': '$self'
     ]
@@ -91,7 +87,7 @@
   }
   {
       'name': 'keyword.operator.swift'
-      'match': '(\\->|<|>|:|\\!|\\~|\\+|\\-|<<|>>|\\=|\\*|/|%|&|\\||\\^|\\.\\.<|\\.\\.\\.|\\bis\\b|\\bas[\\?\\!]\\b|\\bas\\b|\\?)'
+      'match': '(\\->|,|<|>|:|\\!|\\~|\\+|\\-|<<|>>|\\=|\\*|/|%|&|\\||\\^|\\.\\.<|\\.\\.\\.|\\bis\\b|\\bas[\\?\\!]\\b|\\bas\\b|\\?)'
   }
   {
     'name': 'support.type.swift'
@@ -467,15 +463,6 @@
         'include': '#quoted-text'
       }
     ]
-  'operator':
-    'patterns': [
-        {
-          'include': '#operator-character'
-        }
-      ]
-  'operator-character':
-    'name': 'keyword.operator.swift'
-    'match': '[\\/=\\-+!*%<>&|^~,\\?:\\[\\]]'
   'quoted-text':
     'patterns': [
       {

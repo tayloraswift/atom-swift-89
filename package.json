@@ -1,7 +1,7 @@
 {
-  "name": "language-swift89",
+  "name": "language-swift-89",
   "version": "0.0.0",
-  "description": "Improved Swift syntax highlighting in Atom",
+  "description": "Comprehensive Swift syntax highlighting in Atom <3",
   "engines": 
   {
     "atom": "*"
@@ -10,11 +10,11 @@
   "repository": 
   {
     "type": "git",
-    "url": "https://github.com/kelvin13/atom-swift89.git"
+    "url": "https://github.com/kelvin13/atom-swift-89.git"
   },
   "bugs": 
   {
-    "url": "https://github.com/kelvin13/atom-swift89/issues"
+    "url": "https://github.com/kelvin13/atom-swift-89/issues"
   },
   "license": "GPL3"
 }
