@@ -1,6 +1,6 @@
 {
   "name": "language-swift-89",
-  "version": "0.1.0",
+  "version": "0.2.0",
   "description": "Comprehensive Swift syntax highlighting in Atom <3",
   "engines": {
     "atom": "*"
