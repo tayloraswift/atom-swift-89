@@ -15,11 +15,11 @@
   }
   {
     'name': 'keyword.declaration.swift'
-    'match': '\\b(import|throws|rethrows)\\b'
+    'match': '\\b(import(\\s(typealias|struct|class|enum|protocol|var|func))?|throws|rethrows)\\b'
   }
   {
     'name': 'storage.type.swift'
-    'match': '\\b(precedencegroup|class|struct|enum|extension|protocol|let|var|typealias)\\b'
+    'match': '\\b(precedencegroup|class|struct|enum|extension|protocol|let|var|typealias|associatedtype)\\b'
   }
   {
     'name': 'storage.modifier.swift'
