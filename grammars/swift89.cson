@@ -19,7 +19,7 @@
   }
   {
     'name': 'storage.type.swift'
-    'match': '\\b(precedencegroup|class|struct|enum|extension|protocol|let|var|typealias|associatedtype)\\b'
+    'match': '\\b(class|struct|enum|extension|protocol|let|var|typealias|associatedtype)\\b'
   }
   {
     'name': 'storage.modifier.swift'
@@ -35,7 +35,7 @@
   }
   {
     'name': 'keyword.reserved.swift'
-    'match': '\\b(associativity|infix|left|mutating|nonmutating|operator|override|postfix|precedence|prefix|right|unowned|unowned\(safe\)|unowned\(unsafe\)|weak)\\b'
+    'match': '\\b(infix|mutating|nonmutating|operator|override|postfix|precedence|prefix|unowned|unowned\(safe\)|unowned\(unsafe\)|weak)\\b'
   }
   {
     'name': 'keyword.reserved.swift'
@@ -48,6 +48,29 @@
   {
     'name': 'variable.language.swift'
     'match': '(\\b(self|Self|super)\\b|\\$[0-9]+)'
+  }
+  {
+    'name': 'meta.type.swift'
+    'begin': '\\b(precedencegroup)\\b'
+    'beginCaptures':
+        '1':
+            'name': 'storage.type.swift'
+    'end': '\\}'
+    'patterns': [
+        {
+            'name': 'keyword.reserved.swift'
+            'match': '\\b(associativity|higherThan|lowerThan|assignment)\\b'
+        }
+        {
+            'name': 'support.type.swift'
+            'match': '\\b((BitwiseShift|Multiplication|Addition|RangeFormation|Casting|NilCoalescing|Comparison|LogicalConjunction|LogicalDisjunction|Ternary|Assignment)Precedence)\\b'
+        }
+        {
+            'name': 'keyword.reserved.swift'
+            'match': '(?<=\\:)\\s*(left|right|none)\\b'
+        }
+        'include': '$self'
+    ]
   }
   {
     'name': 'meta.function.swift'
