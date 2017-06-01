@@ -19,7 +19,7 @@
   }
   {
     'name': 'storage.type.swift'
-    'match': '\\b(class|struct|enum|extension|protocol|let|var|typealias|associatedtype)\\b'
+    'match': '\\b(let|var|class|struct|enum|extension|protocol|typealias|associatedtype)\\b'
   }
   {
     'name': 'storage.modifier.swift'
@@ -27,7 +27,7 @@
   }
   {
     'name': 'keyword.controls.swift'
-    'match': '\\b(try|catch|repeat|break|case|continue|default|do|else|fallthrough|if|in|for|return|switch|where|while|guard|defer)\\b'
+    'match': '\\b(try|catch|throw|repeat|break|case|continue|default|do|else|fallthrough|if|in|for|return|switch|where|while|guard|defer)\\b'
   }
   {
     'name': 'keyword.expressions-and-types.swift'
@@ -35,7 +35,7 @@
   }
   {
     'name': 'keyword.reserved.swift'
-    'match': '\\b(infix|mutating|nonmutating|operator|override|postfix|precedence|prefix|unowned|unowned\(safe\)|unowned\(unsafe\)|weak)\\b'
+    'match': '\\b(infix|mutating|nonmutating|operator|override|postfix|precedence|prefix|unowned|unowned\(safe\)|unowned\(unsafe\)|weak)\\b(?!\\s*:)'
   }
   {
     'name': 'keyword.reserved.swift'
