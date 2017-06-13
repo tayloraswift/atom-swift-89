@@ -11,7 +11,7 @@
   {
     'name': 'keyword.others.swift'
     'match': '^\\s*(#if|#else|#endif|#elseif
-	  |@discardableResult|@testable)\\b'
+	  |@discardableResult|@testable|@inline)\\b'
   }
   {
     'name': 'keyword.declaration.swift'
@@ -117,6 +117,21 @@
     'match': '(?x) \\b(Character|U?Int|U?Int(8|16|32|64)
       |Swift
       |Float|Double|Float80|Bool
+
+      |Unicode(\\.(Scalar|ASCII|UTF8|UTF16|UTF32|ParseResult|Encoding|Parser))?
+
+      |BinaryInteger
+      |FixedWidthInteger
+      |Numeric
+      |SignedNumeric
+      |StringProtocol
+      |SubString
+
+      |UTF8
+      |UTF16
+      |UTF32
+
+
       |Any
       |AnyBidirectionalCollection
       |AnyCollection
@@ -184,7 +199,6 @@
       |Stride(ThroughIterator|Through|ToIterator|To)
       |String
       |UnfoldSequence
-      |UnicodeScalar
       |Unmanaged
       |Unsafe(Mutable)?(Raw)?BufferPointer(Iterator)?
       |Unsafe(Mutable)?(Raw)?Pointer
@@ -254,6 +268,7 @@
       |SetIndex
       |UIntMax
       |UnfoldFirstSequence
+      |UnicodeScalar
       |UnicodeScalarType
       |Void)\\b'
   }
@@ -346,7 +361,7 @@
       }
       {
         'name': 'constant.character.escape.swift'
-        'match': '\\\\(x\\h{2}|u\\h{4}|U\\h{8})'
+        'match': '\\\\u\\{\\h+\\}'
       }
       {
         'name': 'invalid.illegal.constant.character.escape.swift'
